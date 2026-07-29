@@ -11,6 +11,9 @@ Zielumgebung unterscheidet (Zugangsdaten, Testparameter), wird zur
 Laufzeit über Volumes ins Image gemountet – ein Rebuild ist dafür nie
 nötig.
 
+GIT Repo: https://github.com/b1-systems/rallytest
+Quay Image: https://quay.io/repository/b1-systems/rallytest
+
 ## Voraussetzungen
 
 - Docker
