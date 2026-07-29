@@ -1,0 +1,21 @@
+---
+  service_list:
+      - authentication
+      # - nova
+      #- neutron
+      #- keystone
+      #- cinder
+      # - glance
+      #- designate
+      #- octavia
+  use_existing_users: false
+  image_name: "^cirros"
+  flavor_name: "2C-1G-10G"
+  glance_image_location: "https://download.cirros-cloud.net/0.6.2/cirros-0.6.2-x86_64-disk.img"
+  smoke: true
+  users_amount: 10
+  tenants_amount: 10
+  controllers_amount: 3
+  compute_amount: 4
+  storage_amount: 2
+  network_amount: 2

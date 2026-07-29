@@ -1,0 +1,126 @@
+  Octavia.create_and_delete_loadbalancers:
+    -
+      args: {}
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_delete_pools:
+    -
+      args:
+        protocol: "HTTP"
+        lb_algorithm: "ROUND_ROBIN"
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_list_loadbalancers:
+    -
+      args: {}
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_list_pools:
+    -
+      args:
+        protocol: "HTTP"
+        lb_algorithm: "ROUND_ROBIN"
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_show_loadbalancers:
+    -
+      args: {}
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_show_pools:
+    -
+      args:
+        protocol: "HTTP"
+        lb_algorithm: "ROUND_ROBIN"
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_stats_loadbalancers:
+    -
+      args: {}
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_update_loadbalancers:
+    -
+      args: {}
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+  Octavia.create_and_update_pools:
+    -
+      args:
+        protocol: "HTTP"
+        lb_algorithm: "ROUND_ROBIN"
+      runner:
+        {{ constant_runner(concurrency=min(50, 3*controllers_amount),times=min(30, 10*controllers_amount), is_smoke=smoke) }}
+      context:
+        {% call user_context(tenants_amount, users_amount, use_existing_users) %}
+        roles:
+        - load-balancer_member
+        network: {}
+        {% endcall %}
+      sla:
+        {{ no_failures_sla() }}
+ 
